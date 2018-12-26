@@ -270,7 +270,7 @@ def saveReads(dataHub, nameExtra=None):
 
             bam_small.close()
             sorted_path = outbam_path.replace(".bam", ".sorted")
-            pysam.sort("-o", outbam_path, sorted_path)
+            pysam.sort("-o", sorted_path, outbam_path)
             pysam.index(sorted_path+".bam")
 
 def saveState(dataHub):
